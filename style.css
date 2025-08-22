@@ -1,0 +1,118 @@
+/* 全局 */
+body {
+  margin: 0;
+  font-family: "MS PGothic", sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 容器 */
+.container {
+  text-align: center;
+  max-width: 800px;
+}
+
+/* 标题 */
+header h1 {
+  font-size: 2.2em;
+  color: #50c0a5; /* 薄荷绿 */
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #ccc;
+}
+header .tagline {
+  font-size: 1em;
+  color: #e892a0; /* 荷花粉 */
+  margin-bottom: 20px;
+}
+
+/* 屏幕框 */
+.screen {
+  position: relative;
+  width: 500px;
+  height: 320px;
+  margin: 0 auto 20px;
+  border: 6px solid #50c0a5;
+  border-radius: 12px;
+  background: #111;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(80,192,165,0.6);
+}
+
+/* 扫描线效果 */
+.screen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+/* 角色图 */
+.character {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: flicker 3s infinite;
+}
+
+/* HUD */
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: #50c0a5;
+  text-shadow: 0 0 4px #50c0a5;
+  font-weight: bold;
+}
+
+/* 菜单按钮 */
+.menu {
+  margin: 15px 0;
+}
+.menu button {
+  background: #e892a0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #b46c7a;
+  transition: all 0.2s ease;
+}
+.menu button:hover {
+  background: #50c0a5;
+  box-shadow: 0 3px 0 #3a8d7c;
+}
+
+/* 信息框 */
+.info-box {
+  border: 2px solid #50c0a5;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* 动画 */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  48% { opacity: 0.98; }
+  49% { opacity: 0.6; }
+  50% { opacity: 1; }
+  80% { opacity: 0.95; }
+}
