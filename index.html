@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>LoveLink - 彼氏/彼女は、隣にいる</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 标题区 -->
+    <header>
+      <h1>彼氏/彼女は、隣にいる</h1>
+      <p class="tagline">— 200X年恋爱AI模拟 —</p>
+    </header>
+
+    <!-- 屏幕展示区 -->
+    <div class="screen">
+      <img src="images/sample.png" alt="虚拟恋人" class="character">
+      <div class="hud">[ REC ] 00:12</div>
+    </div>
+
+    <!-- 菜单按钮 -->
+    <nav class="menu">
+      <button onclick="showMessage('世界观')">世界观</button>
+      <button onclick="showMessage('角色图鉴')">角色图鉴</button>
+      <button onclick="showMessage('活动规则')">活动规则</button>
+    </nav>
+
+    <!-- 信息显示 -->
+    <div id="infoBox" class="info-box">
+      请选择上方菜单查看内容。
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
